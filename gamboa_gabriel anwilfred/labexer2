@@ -1,0 +1,58 @@
+import java.util.Scanner;
+
+public class labexer2 {
+    // Attributes
+    private String itemName;
+    private double itemPrice;
+    private int itemQuantity;
+    private double amountDue;
+
+    // Method to set item name
+    public void setItemName(String newItemName) {
+        itemName = newItemName;
+    }
+
+    // Method to set quantity and price, then calculate total cost
+    public void setTotalCost(int quantity, double price) {
+        itemQuantity = quantity;
+        itemPrice = price;
+        amountDue = quantity * price;
+    }
+
+    // Method to return item name
+    public String getItemName() {
+        return itemName;
+    }
+
+    // Method to return total cost
+    public double getTotalCost() {
+        return amountDue;
+    }
+
+    // Method to read user input
+    public void readInput() {
+        Scanner s = new Scanner(System.in);
+
+        System.out.println("Enter the name of the item you are purchasing.");
+        itemName = s.nextLine();
+
+        System.out.println("Enter the quantity and price separated by a space.");
+        itemQuantity = s.nextInt();
+        itemPrice = s.nextDouble();
+
+        amountDue = itemQuantity * itemPrice;
+    }
+
+    // Method to display output
+    public void writeOutput() {
+        System.out.printf("You are purchasing %d %s(s) at %.2f each.%n", itemQuantity, itemName, itemPrice);
+        System.out.printf("Amount due is %.2f%n", amountDue);
+    }
+
+    // Main method to run the program
+    public static void main(String[] args) {
+        labexer2 item = new labexer2();
+        item.readInput();
+        item.writeOutput();
+    }
+}

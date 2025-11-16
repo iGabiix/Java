@@ -1,0 +1,29 @@
+{
+    // ✅ Always run programs in the integrated terminal (so Scanner input works)
+    "code-runner.runInTerminal": true,
+
+    // ✅ Save file automatically before running
+    "code-runner.saveFileBeforeRun": true,
+
+    // ✅ Clear terminal before each run for clean output
+    "code-runner.clearPreviousOutput": true,
+
+    // ✅ Set default language runner to Java
+    "code-runner.executorMap": {
+        "java": "cd $dir && javac $fileName && java $fileNameWithoutExt"
+    },
+
+    // ✅ Better terminal font & colors (optional)
+    "terminal.integrated.fontFamily": "Consolas, 'Courier New', monospace",
+    "terminal.integrated.cursorStyle": "block",
+    "terminal.integrated.cursorBlinking": true,
+
+    // ✅ Enable automatic detection of Java runtime
+    "java.configuration.checkProjectSettingsExclusions": false,
+
+    // ✅ Java formatting and linting improvements
+    "java.format.settings.url": "https://raw.githubusercontent.com/redhat-developer/vscode-java/master/formatting/java-formatter.xml",
+    "java.errors.incompleteClasspath.severity": "ignore"
+}
+
+* text=auto
